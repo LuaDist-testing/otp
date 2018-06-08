@@ -1,7 +1,5 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "otp"
-version = "0.1-1"
+version = "0.1-2"
 description = {
   summary = "A simple implementation of OATH-HOTP and OATH-TOTP.",
   detailed = [[
@@ -14,26 +12,20 @@ description = {
   homepage = "https://github.com/remjey/luaotp",
   license = "MIT/X11",
 }
--- LuaDist source
 source = {
-  tag = "0.1-1",
-  url = "git://github.com/LuaDist-testing/otp.git"
+  url = "git://github.com/remjey/luaotp",
+  tag = "v0.1-2",
 }
--- Original source
--- source = {
---   url = "git://github.com/remjey/luaotp",
---   tag = "v0.1-1",
--- }
 dependencies = {
-  "lua ~> 5.1",
+  "lua => 5.1",
   "luacrypto ~> 0.3",
   "basexx >= 0.1",
-  "randbytes",
 }
 build = {
   type = "builtin",
   modules = {
     otp = "src/otp.lua",
   },
-  copy_directories = { "doc", "test" },
+  copy_directories = { "doc", "spec" },
 }
+
